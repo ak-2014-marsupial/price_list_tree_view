@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background);
+
+}
+
+.container{
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0;
+  min-width: 400px;
+  background-color: var(--background);
+}
+
+:root {
+  --background: #F6FFDE;
+  --text-primary: #0F2103;
+  --text-secondary: #183605;
+  --accent: #E3F2C1;
+  --accent-hover: #C9DBB2;
+  --border: #1f1e1e;
+  --shadow: #AAC8A7;
+  --star-primary: #D80032;
+  --star-secondary: #B0A695;
+}

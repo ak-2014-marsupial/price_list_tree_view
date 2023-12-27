@@ -1,0 +1,20 @@
+.wrapper{
+    margin: 0.6em;
+    color: var(--text-primary);
+}
+
+.menu_item{
+    cursor: pointer;
+
+}
+.menu_item span{
+    color: red;
+    background-color: aquamarine;
+}
+.sub_menu{
+    padding-left: 1.2em;
+}
+
+.sub_menu_shrunk{
+    display: none;
+}

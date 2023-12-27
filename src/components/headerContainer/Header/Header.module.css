@@ -1,0 +1,129 @@
+.header {
+    /*position: fixed;*/
+    position: sticky;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 2em;
+    height: 10vh;
+    background-color: var(--background);
+
+    box-shadow: 0 4px 4px -4px var(--text-secondary);
+    color: var(--text-primary);
+    z-index: 10;
+}
+
+.header a{
+    text-decoration: none;
+    color:var(--text-primary);
+}
+.header a[class="active"]{
+    color:var(--star-primary)
+}
+
+.logo {
+    font-size: 2em;
+    line-height: 1;
+    font-weight: 700;
+    color: var(--text-secondary);
+}
+
+.nav {
+    /*margin-left: auto;*/
+
+}
+
+.nav_list {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+
+}
+
+.nav_item {
+    font-size: 1.4em;
+    line-height: 1;
+    color: var(--text-secondary);
+}
+
+.nav_item:nth-child(n+2) {
+    margin-left: 0.7em;
+}
+
+.burger {
+    display: none;
+}
+
+@media (max-width: 550px) {
+    .header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+    }
+
+    .nav_list {
+        margin-top: 5em;
+    }
+
+    .nav {
+        position: fixed;
+        top: 0;
+        left: -310px;
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        height: 100%;
+        background-color: var(--background);
+        border: 2px solid var(--border);
+        border-top-right-radius: 2em;
+        border-bottom-right-radius: 2em;
+        box-shadow: 0 0 4px 4px var(--shadow);
+        transition: transform 0.7s linear;
+    }
+
+    .nav_active {
+        transform: translateX(100%);
+
+    }
+
+    .nav_list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 10;
+    }
+
+    .nav_item {
+        margin: 0.5em 0;
+        font-weight: 500;
+        z-index: 10;
+        color: var(--text-secondary);
+        cursor: pointer;
+    }
+
+    .nav_item:nth-child(n+2) {
+        margin-left: 0;
+    }
+
+    .burger {
+        display: block;
+        background-color: transparent;
+        padding: 0.2em;
+        border: 1px solid var(--border);
+        border-radius: 0.8em;
+        cursor: pointer;
+
+        position: absolute;
+        top: 2vh;
+        right: 2em;
+    }
+
+    .burger:hover {
+        box-shadow: 0 0 10px var(--accent-hover), 0 0 10px var(--accent-hover), 0 0 10px var(--accent-hover), 0 0 10px var(--accent-hover), 0 0 10px var(--accent-hover);
+
+    }
+
+}

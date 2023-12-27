@@ -1,0 +1,31 @@
+
+.data{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    position: relative;
+}
+.data input, button{
+    color:var(--text-primary);
+    border:1px solid var(--border);
+    box-shadow: var(--shadow);
+    margin-bottom: 0.5em;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    font-size: 1em;
+}
+.data input{
+    max-width: 60%;
+}
+
+.title{
+    color:var(--star-primary);
+    font-size: 1em;
+    background: transparent;
+    text-align: center;
+
+}

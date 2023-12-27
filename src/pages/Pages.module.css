@@ -1,0 +1,6 @@
+.page{
+    height: 100vh;
+    padding: 0;
+    font-size: 2em;
+    color:var(--text-primary)
+}

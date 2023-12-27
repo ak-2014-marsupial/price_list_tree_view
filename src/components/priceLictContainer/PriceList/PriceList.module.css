@@ -1,0 +1,87 @@
+
+.menu_item{
+    cursor: pointer;
+    /*border: 1px solid blue;*/
+    display: flex;
+}
+.menu_item span{
+    color: red;
+    background-color: var(--accent-hover);
+    padding: 0.3em 0.6em;
+    margin: 0.4em;
+    border: 1px solid var(--border);
+    border-radius: 0.6em;
+}
+
+.menu_item span:hover{
+    box-shadow: 0 0 10px var(--accent-hover), 0 0 10px var(--accent-hover), 0 0 10px var(--accent-hover), 0 0 10px var(--accent-hover), 0 0 10px var(--accent-hover);
+}
+.sub_menu{
+    padding-left: 1.2em;
+}
+
+.sub_menu_shrunk{
+    display: none;
+}
+.wrapper{
+    margin: 0.5em;
+    scroll-behavior: auto;
+}
+
+.group{
+    font-size: 1.2em;
+    font-style: italic;
+    font-weight: 600;
+    color: var(--text-secondary);
+    line-height: 1.8em;
+    border-bottom: 1px solid var(--shadow);
+    width: 100%;
+    border-radius: 0.5em;
+    margin-bottom: 0.2em;
+    padding-left: 0.2em;
+}
+.group:hover, .row:hover{
+    box-shadow: 0 0 10px var(--accent-hover), 0 0 10px var(--accent-hover), 0 0 10px var(--accent-hover), 0 0 10px var(--accent-hover), 0 0 10px var(--accent-hover);
+    background-color: var(--accent-hover);
+    transform: scale(0.99);
+    transition: all ease 300ms;
+}
+
+.row{
+    color:var(--text-secondary);
+    display: flex;
+    border:1px solid var(--border);
+    margin-bottom: 0.1em;
+    border-radius: 0.5em;
+    width: 100%;
+}
+.title{
+    padding:  0.2em;
+    width: 75%;
+    border-radius: inherit;
+    background-color: inherit;
+}
+.col{
+    width: 25%;
+    border-radius: inherit;
+    background-color: inherit;
+
+}
+.price{
+    border-bottom:1px solid var(--border);
+    padding: 0 0.2em;
+    text-align: center;
+    border-top-right-radius: inherit;
+    background-color: inherit;
+    font-size: 1.1em;
+
+
+}
+.stock{
+    padding: 0 0.4em;
+    border-bottom-right-radius: inherit;
+    text-align: right;
+    background-color: inherit;
+    font-size: 0.9em;
+
+}
