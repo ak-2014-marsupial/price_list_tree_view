@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/price_list_tree_view/static/css/main.fdcea1ee.css",
+    "main.js": "/price_list_tree_view/static/js/main.0628a33d.js",
+    "static/media/search_find.png": "/price_list_tree_view/static/media/search_find.274fe1201b5c46963beb.png",
+    "index.html": "/price_list_tree_view/index.html",
+    "main.fdcea1ee.css.map": "/price_list_tree_view/static/css/main.fdcea1ee.css.map",
+    "main.0628a33d.js.map": "/price_list_tree_view/static/js/main.0628a33d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fdcea1ee.css",
+    "static/js/main.0628a33d.js"
+  ]
+}
