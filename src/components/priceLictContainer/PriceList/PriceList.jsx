@@ -15,7 +15,7 @@ const PriceList = () => {
     return (
         <div className={css.wrapper}>
             {/*<button onClick={()=>dispatch(priceListActions.getFilterData((node) => node.id === "6"))}>Filter</button>*/}
-            <button onClick={()=>dispatch(priceListActions.getFilterDataById("00011122" ))}>Filter</button>
+            <button onClick={()=>dispatch(priceListActions.getFilterDataById("00000005431" ))}>Filter 00000005431</button>
             {tree.children.map(item => <Item key={item.id} item={item}/>)}
         </div>
     );

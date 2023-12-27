@@ -10,7 +10,7 @@ import {DataUpdateHoc} from "./hoc/DataUpdateHoc";
 const router = createHashRouter([
     {
         path: "", element: <MainLayout/>, children: [
-            {index: true, element: <Navigate to={"main"}/>},
+            {index: true, element: <Navigate to={"price"}/>},
             {path: "main", element: <MainPage/>},
             {path: "dataupdate", element: <DataUpdate/>},
             {

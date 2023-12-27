@@ -1,6 +1,6 @@
 .header {
-    /*position: fixed;*/
-    position: sticky;
+    position: fixed;
+    /*position: sticky;*/
     left: 0;
     top: 0;
     display: flex;
@@ -117,8 +117,8 @@
         cursor: pointer;
 
         position: absolute;
-        top: 2vh;
-        right: 2em;
+        top: 1vh;
+        right: 0.5em;
     }
 
     .burger:hover {
