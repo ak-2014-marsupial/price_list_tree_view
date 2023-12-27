@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cac8dcee-81d7-441d-866b-45589d4c249e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/headerContainer/Header/Header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/headerContainer/Header/Header.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/headerContainer/Search/Search.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/headerContainer/Search/Search.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/priceLictContainer/PriceList/Item.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/priceLictContainer/PriceList/Item.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/priceLictContainer/PriceList/PriceList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/priceLictContainer/PriceList/PriceList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/MainLayout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/MainLayout.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,9 +19,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2a7E9ZsJNLREuiOKhbC996rN5Ng" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -37,6 +31,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -62,6 +57,7 @@
       <option name="presentableId" value="Default" />
       <updated>1703661075334</updated>
       <workItem from="1703661082121" duration="2242000" />
+      <workItem from="1703667401178" duration="920000" />
     </task>
     <servers />
   </component>
