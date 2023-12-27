@@ -7,7 +7,6 @@
     <list default="true" id="cac8dcee-81d7-441d-866b-45589d4c249e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/priceLictContainer/PriceList/PriceList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/priceLictContainer/PriceList/PriceList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/priceLictContainer/PriceList/PriceList.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/priceLictContainer/PriceList/PriceList.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/slices/priceListSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/slices/priceListSlice.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +59,7 @@
       <option name="presentableId" value="Default" />
       <updated>1703661075334</updated>
       <workItem from="1703661082121" duration="2242000" />
-      <workItem from="1703667401178" duration="8291000" />
+      <workItem from="1703667401178" duration="11367000" />
     </task>
     <servers />
   </component>

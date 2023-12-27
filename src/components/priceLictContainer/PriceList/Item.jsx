@@ -8,7 +8,7 @@ const Item = ({item}) => {
     const handleClick = (item) => {
         item.children && setIsOpened(!isOpened);
     }
-
+    console.log("render Item");
     return (
 
         <div>

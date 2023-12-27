@@ -12,6 +12,12 @@ const PriceList = () => {
     const handleInputChange = (e) => {
         setId(e.target.value)
     }
+    const handleClick=(id)=>{
+        // dispatch(priceListActions.getDataById(id));
+        console.log(id);
+        dispatch(priceListActions.getFilterData(id));
+
+    }
 
     const tree = filterPriceList?.children?.length ? filterPriceList : priceList;
 
@@ -22,7 +28,7 @@ const PriceList = () => {
                    onFocus={e => {
                        e.target.select()
                    }}/>
-            <button onClick={() => dispatch(priceListActions.getDataById(id))}>Filter</button>
+            <button onClick={() =>handleClick(id) }>Filter</button>
             {tree.children.map(item => <Item key={item.id} item={item}/>)}
         </div>
     );

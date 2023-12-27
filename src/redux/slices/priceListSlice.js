@@ -67,12 +67,8 @@ const priceListSlice = createSlice({
     reducers: {
         getFilterData: (state, action) => {
             const regexp = new RegExp(action.payload.trim().split(" ").join("|"));
-
-            const tr = state.priceList;
-            // const fff = filterTree(tr, (node) => node.name === "Knauf Гипсокартон Потолок 2500*1200*9,5 (68шт/палета)");
-            const fff = filterTree(tr, (node) => regexp.test(node.name));
-            console.log(fff);
-            state.filter = {};
+            const result = filterTree(state.priceList, (node) => node.data && regexp.test(node.name.toLowerCase()));
+            state.filterPriceList = result;
         },
         getDataById: (state, action) => {
             const strId = `${action.payload}`;
