@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import {useDispatch, useSelector} from "react-redux";
 import css from "./PriceList.module.css";
@@ -7,15 +7,22 @@ import {priceListActions} from "../../../redux";
 
 const PriceList = () => {
     const dispatch = useDispatch();
-    const {priceList,filterPriceList} = useSelector(state => state.priceList);
+    const {priceList, filterPriceList} = useSelector(state => state.priceList);
+    const [id, setId] = useState("")
+    const handleInputChange = (e) => {
+        setId(e.target.value)
+    }
 
+    const tree = filterPriceList?.children?.length ? filterPriceList : priceList;
 
-    const tree = Object.keys(filterPriceList).length>0?filterPriceList:priceList;
-    console.log(tree);
     return (
         <div className={css.wrapper}>
-            {/*<button onClick={()=>dispatch(priceListActions.getFilterData((node) => node.id === "6"))}>Filter</button>*/}
-            <button onClick={()=>dispatch(priceListActions.getFilterDataById("00000005431" ))}>Filter 00000005431</button>
+            <input type="text" placeholder={"введiть ID"} onChange={handleInputChange}
+                   value={id}
+                   onFocus={e => {
+                       e.target.select()
+                   }}/>
+            <button onClick={() => dispatch(priceListActions.getDataById(id))}>Filter</button>
             {tree.children.map(item => <Item key={item.id} item={item}/>)}
         </div>
     );

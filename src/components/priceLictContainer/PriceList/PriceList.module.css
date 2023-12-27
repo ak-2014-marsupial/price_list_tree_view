@@ -74,8 +74,6 @@
     border-top-right-radius: inherit;
     background-color: inherit;
     font-size: 1.1em;
-
-
 }
 .stock{
     padding: 0 0.4em;
@@ -83,5 +81,14 @@
     text-align: right;
     background-color: inherit;
     font-size: 0.9em;
+}
 
+.wrapper input, button{
+    color:var(--text-primary);
+    border:1px solid var(--border);
+    box-shadow: var(--shadow);
+    margin-bottom: 0.5em;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    font-size: 1em;
 }

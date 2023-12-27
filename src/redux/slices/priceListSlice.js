@@ -8,15 +8,15 @@ const initialState = {
     hasData: false,
     isLoading: false,
     errors: null,
-    filterPriceList:{},
+    filterPriceList: {},
 }
 
 const getAll = createAsyncThunk(
     "priceListSlice/getAll",
     async ({code}, thunkAPI) => {
         try {
-            const {data:{dataOfPrice,price}} = await priceListService.getPriceList();
-            return thunkAPI.fulfillWithValue({dateUpdate:dataOfPrice,price:decryptedJson(price, code)});
+            const {data: {dataOfPrice, price}} = await priceListService.getPriceList();
+            return thunkAPI.fulfillWithValue({dateUpdate: dataOfPrice, price: decryptedJson(price, code)});
         } catch (e) {
             return thunkAPI.rejectWithValue(e.response.data)
         }
@@ -57,26 +57,27 @@ const filterTreeByDataId = (obj, strId) => {
         }
     }
     return null;
+    // return {};
 }
+
 
 const priceListSlice = createSlice({
     name: "priceList",
     initialState,
     reducers: {
         getFilterData: (state, action) => {
-            const cb = action.payload;
-            console.log(cb);
+            const regexp = new RegExp(action.payload.trim().split(" ").join("|"));
+
             const tr = state.priceList;
-            const fff = filterTree(tr, (node) => node.name === "Knauf Гипсокартон Потолок 2500*1200*9,5 (68шт/палета)");
+            // const fff = filterTree(tr, (node) => node.name === "Knauf Гипсокартон Потолок 2500*1200*9,5 (68шт/палета)");
+            const fff = filterTree(tr, (node) => regexp.test(node.name));
             console.log(fff);
             state.filter = {};
         },
-        getFilterDataById: (state, action) => {
-            const strId = action.payload;
-            // const tree = JSON.parse(state.priceList);
+        getDataById: (state, action) => {
+            const strId = `${action.payload}`;
             const tree = state.priceList;
-            const result = filterTreeByDataId(tree, "00000004728");
-            console.log(strId, result)
+            const result = filterTreeByDataId(tree, strId);
             state.filterPriceList = result;
         }
     },
@@ -88,12 +89,12 @@ const priceListSlice = createSlice({
                 state.dateOfUpdate = action.payload.dateUpdate.slice(-10);
                 state.isLoading = false;
                 state.errors = null;
-                state.hasData=Object.keys(state.priceList).length>0
+                state.hasData = Object.keys(state.priceList).length > 0
             })
             .addCase(getAll.rejected, (state, action) => {
                 state.errors = action.payload;
                 state.isLoading = false;
-                console.log("rejected",Object.keys(state.priceList).length);
+                console.log("rejected", Object.keys(state.priceList).length);
             })
             .addCase(getAll.pending, (state, action) => {
                 state.isLoading = true;
