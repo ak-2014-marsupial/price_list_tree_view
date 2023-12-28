@@ -1,4 +1,4 @@
-import React, {memo, useState} from 'react';
+import React, { useState} from 'react';
 
 import css from "./PriceList.module.css";
 
@@ -21,7 +21,7 @@ const Item = ({item}) => {
                 ):(
                     <div  className={css.row}  >
                         <div className={css.title}>{item.name}</div>
-                        <div>{item.data.id}</div>
+                        {/*<div>{item.data.id}</div>*/}
                         <div className={css.col}>
                         <div className={css.price}>{formatter.format(item.data.price)}</div>
                         <div className={css.stock}>{item.data.stock} {item.data.unit} </div>

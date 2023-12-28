@@ -1,4 +1,4 @@
-import React, {useMemo, useState} from 'react';
+import React, {useMemo, useState,useEffect} from 'react';
 
 import {useDispatch, useSelector} from "react-redux";
 import css from "./PriceList.module.css";
@@ -8,15 +8,25 @@ import {priceListActions} from "../../../redux";
 const PriceList = (factory, deps) => {
     const dispatch = useDispatch();
     const {priceList, filterPriceList} = useSelector(state => state.priceList);
-    const [id, setId] = useState("")
+    const [id, setId] = useState("");
+
     const handleInputChange = (e) => {
-        setId(e.target.value)
+        setId(e.target.value);
+        // dispatch(priceListActions.getFilterData(`${e.target.value}`));
     }
-    const handleClick = (id) => {
-        // dispatch(priceListActions.getDataById(id));
-        console.log(id);
-        dispatch(priceListActions.getFilterData(id));
-    }
+
+    useEffect(() => {
+        const timer=setTimeout(()=>{
+            dispatch(priceListActions.getFilterData(id));
+            console.log("USEEFFECT");
+        },300);
+        return ()=>{
+            clearTimeout(timer);
+        }
+
+    }, [id,dispatch]);
+
+
 
     const tree = filterPriceList?.children?.length ? filterPriceList : priceList;
     const items = useMemo(() => {
@@ -30,8 +40,6 @@ const PriceList = (factory, deps) => {
                    onFocus={e => {
                        e.target.select()
                    }}/>
-            <button onClick={() => handleClick(id)}>Filter</button>
-            {/*{tree?.children?.map(item => <Item key={item.id} item={item}/>)}*/}
             {items}
         </div>
     );
